@@ -22,7 +22,7 @@ Version: 1.0.0
 
 // Buttons
 .btn {
-	transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
 }
 
 
@@ -34,13 +34,13 @@ Version: 1.0.0
 
 // Header
 .page-header {
-	
+    
 }
 
 
 // Logo
 .logo {
-	
+    
 }
 
 
@@ -53,7 +53,7 @@ Version: 1.0.0
 
 // Navigation
 .page-nav {
-	
+    
 }
 
 
@@ -66,13 +66,13 @@ Version: 1.0.0
 
 // Main Content
 .page-main {
-	
+    
 }
 
 
 // Page Title
 .page-title {
-	
+    
 }
 
 
@@ -85,35 +85,35 @@ Version: 1.0.0
 
 // Posts
 .post {
-	position: relative;
-	
-	&:not(:last-child) {
-		margin-bottom: $section-spacer;
-	}
+    position: relative;
+    
+    &:not(:last-child) {
+        margin-bottom: $section-spacer;
+    }
 }
 
 .post-thumbnail {
-	
+    
 }
 
 .post-title {
-	
+    
 }
 
 .post-author {
-	
+    
 }
 
 .post-date {
-	
+    
 }
 
 .post-excerpt {
-	
+    
 }
 
 .post-body {
-	
+    
 }
 
 
@@ -126,15 +126,15 @@ Version: 1.0.0
 
 // Footer
 .page-footer {
-	padding-top: $section-spacer;
-	padding-bottom: $section-spacer;
-	background-color: $html-bg;
-	color: #fff;
-	text-align: center;
+    padding-top: $section-spacer;
+    padding-bottom: $section-spacer;
+    background-color: $html-bg;
+    color: #fff;
+    text-align: center;
 }
 
 
 // Copyright
 .copyright {
-	
+    
 }

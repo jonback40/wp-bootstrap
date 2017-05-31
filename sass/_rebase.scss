@@ -5,57 +5,57 @@
 
 // Links
 a {
-	&:hover,
-	&:focus {
-		text-decoration: none;
-	}
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 
 // Headings
 @include headings() {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 
 // Lists
 ul,
 ol {
-	margin-top: 0;
-	margin-left: 20px;
-	padding: 0;
-	
-	ul,
-	ol {
-		margin-left: 15px;
-		margin-bottom: 0;
-	}
+    margin-top: 0;
+    margin-left: 20px;
+    padding: 0;
+    
+    ul,
+    ol {
+        margin-left: 15px;
+        margin-bottom: 0;
+    }
 }
 
 ul li {
-	list-style: disc;
+    list-style: disc;
 }
 ul ul li,
 ol ul li {
-	list-style: circle;
+    list-style: circle;
 }
 ul ul ul li,
 ol ul ul li,
 ol ol ul li {
-	list-style: square;
+    list-style: square;
 }
 
 ol li {
-	list-style: decimal;
+    list-style: decimal;
 }
 ol ol li,
 ul ol li {
-	list-style: lower-alpha;
+    list-style: lower-alpha;
 }
 ol ol ol li,
 ul ol ol li,
 ul ul ol li {
-	list-style: lower-roman;
+    list-style: lower-roman;
 }
 
 
@@ -68,23 +68,23 @@ ul ul ol li {
 
 // Wordpress WYSIWIG Editor
 img {
-	&.alignright {
-		margin: 0 0 1em 1em;
-		float: right;
-	}
+    &.alignright {
+        margin: 0 0 1em 1em;
+        float: right;
+    }
 
-	&.alignleft {
-		margin: 0 1em 1em 0;
-		float: left;
-	}
+    &.alignleft {
+        margin: 0 1em 1em 0;
+        float: left;
+    }
 
-	&.aligncenter {
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-	}
+    &.aligncenter {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
 }
 
-.alignleft		{ float: left; }
-.alignright		{ float: right; }
-.aligncenter	{ margin-left: auto; margin-right: auto; display: block; }
+.alignleft      { float: left; }
+.alignright     { float: right; }
+.aligncenter    { margin-left: auto; margin-right: auto; display: block; }
