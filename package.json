@@ -1,0 +1,27 @@
+{
+  "name": "wp-bootstrap",
+  "version": "1.0.0",
+  "description": "Default setup and configuration for working with Bootstrap and SASS in WordPress",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattmilburn/wp-bootstrap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/mattmilburn/wp-bootstrap#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "bootstrap-sass": "^3.3.7",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
