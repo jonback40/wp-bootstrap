@@ -3,6 +3,18 @@
 // ----------------------------------------------------------------------------------------------------
 
 
+// Common Blocks
+@mixin common-blocks() {
+    p,
+    blockquote,
+    ol,
+    ul,
+    table {
+        @content;
+    }
+}
+
+
 // Headings
 @mixin headings() {
     h1, .h1,

@@ -7,17 +7,17 @@ Description: SITE DESCRIPTION
 Version: 1.0.0
 !*/
 
-@import '_config';
-@import '_mixins';
+@import 'config';
+@import 'mixins';
 @import 'bootstrap';
-@import '_rebase';
-
-
+@import 'rebase';
 
 
 //
 // Theme
 // ----------------------------------------------------------------------------------------------------
+
+
 
 
 // Buttons
@@ -26,9 +26,28 @@ Version: 1.0.0
 }
 
 
+// Page Containers
+.page,
+.page-header,
+.page-nav,
+.page-main,
+.page-title,
+.page-footer {
+    position: relative;
+}
+
+.page,
+.page-main,
+.page-title,
+.page-footer { z-index: 1; }
+.page-header { z-index: 2; }
+.page-nav    { z-index: 3; }
+
+
 
 
 // ----------------------------------------------------------------------------------------------------
+
 
 
 
@@ -66,12 +85,39 @@ Version: 1.0.0
 
 // Main Content
 .page-main {
-    
+    > .inner {
+        padding-top: $section-spacer;
+        padding-bottom: $section-spacer;
+    }
 }
 
 
 // Page Title
 .page-title {
+    padding-top: $section-spacer;
+    padding-bottom: $section-spacer;
+}
+
+
+
+
+// ----------------------------------------------------------------------------------------------------
+
+
+
+
+// Footer
+.page-footer {
+    padding-top: $section-spacer;
+    padding-bottom: $section-spacer;
+    background-color: $html-bg;
+    color: #fff;
+    text-align: center;
+}
+
+
+// Copyright
+.copyright {
     
 }
 
@@ -113,28 +159,5 @@ Version: 1.0.0
 }
 
 .post-body {
-    
-}
-
-
-
-
-// ----------------------------------------------------------------------------------------------------
-
-
-
-
-// Footer
-.page-footer {
-    padding-top: $section-spacer;
-    padding-bottom: $section-spacer;
-    background-color: $html-bg;
-    color: #fff;
-    text-align: center;
-}
-
-
-// Copyright
-.copyright {
     
 }

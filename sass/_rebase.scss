@@ -3,6 +3,12 @@
 // ----------------------------------------------------------------------------------------------------
 
 
+// Body
+html {
+    background-color: $html-bg;
+}
+
+
 // Links
 a {
     &:hover,
@@ -68,16 +74,16 @@ ul ul ol li {
 
 // Wordpress WYSIWIG Editor
 img {
-    &.alignright {
-        margin: 0 0 1em 1em;
-        float: right;
-    }
-
     &.alignleft {
         margin: 0 1em 1em 0;
         float: left;
     }
-
+    
+    &.alignright {
+        margin: 0 0 1em 1em;
+        float: right;
+    }
+    
     &.aligncenter {
         margin-left: auto;
         margin-right: auto;
