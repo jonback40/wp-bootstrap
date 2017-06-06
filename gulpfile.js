@@ -24,7 +24,7 @@ gulp.task('styles', function() {
                 zindex: false
             })
         ]))
-        .pipe(gulp.dest('./theme/css'));
+        .pipe(gulp.dest('./theme/'));
 });
 
 gulp.task('watch', function() {
