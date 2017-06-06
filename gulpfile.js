@@ -6,7 +6,7 @@ var $ = require('gulp-load-plugins')({ lazy: true });
 
 // Tasks
 gulp.task('styles', function() {
-  gulp.src('./sass/style.scss')
+  gulp.src('./src/style.scss')
     .pipe($.plumber({
       handleError: function(err) {
         console.log(err);
@@ -24,11 +24,11 @@ gulp.task('styles', function() {
         zindex: false
       })
     ]))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./theme/css'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./sass/**/*.scss', ['styles']);
+  gulp.watch('./src/**/*.scss', ['styles']);
 });
 
 gulp.task('default', ['styles', 'watch']);
