@@ -26,6 +26,25 @@ Version: 1.0.0
 }
 
 
+// Icons
+.icon {
+    @include text-hide();
+    
+    width: 30px;
+    height: 30px;
+    background-image: url("images/icons.svg");
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+}
+
+.icon-facebook { background-position: 0 0; }
+.icon-twitter  { background-position: -30px 0; }
+.icon-google   { background-position: -60px 0; }
+
+
 // Page Containers
 .page,
 .page-header,
@@ -131,7 +150,7 @@ Version: 1.0.0
 
 // Posts
 .posts {
-	
+    
 }
 
 .post {
@@ -143,7 +162,7 @@ Version: 1.0.0
 }
 
 .post-inner {
-	
+    
 }
 
 .post-thumbnail {
@@ -171,43 +190,74 @@ Version: 1.0.0
 }
 
 .post-links {
-	
+    
 }
 
 .post-permalink {
-	
+    
 }
 
 .post-comments-link {
-	
+    
 }
 
 .post-comments-form {
-	
+    
 }
 
 .post-comments {
-	
+    ul {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 
-// Comments
+// Comment
+.comment-reply-title {
+    
+}
+
+.comment-form {
+    p[class*="comment-form-"] {
+        @extend .form-group;
+    }
+    
+    input[type="text"],
+    textarea,
+    select {
+        @extend .form-control;
+    }
+    
+    input[type="submit"] {
+        @extend .btn;
+        @extend .btn-primary;
+    }
+}
 .comment {
-	
+    list-style: none;
+    
+    + .comment {
+        margin-top: ($section-spacer / 2);
+    }
+    
+    .avatar {
+        border-radius: $border-radius-base;
+    }
 }
 
 .comment-body {
-	
+    
 }
 
 .comment-author {
-	
+    
 }
 
 .comment-meta {
-	
+    
 }
 
 .comment-reply-link {
-	
+    
 }

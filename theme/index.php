@@ -16,9 +16,10 @@
                         <div class="post">
                             <a href="<?php the_permalink(); ?>" class="post-thumbnail" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></a>
                             <div class="post-inner">
+                                <div class="post-thumbnail"><?php the_post_thumbnail('medium'); ?></div>
                                 <h3 class="post-title"><?php the_title(); ?></h3>
-                                <div class="post-author">By <?php echo get_the_author(); ?></div>
-                                <div class="post-date">On <?php echo the_time('F jS, Y'); ?></div>
+                                <div class="post-author">By <?php the_author(); ?></div>
+                                <div class="post-date">On <?php the_time('F jS, Y'); ?></div>
                                 <div class="post-excerpt"><?php the_excerpt(); ?></div>
                                 <div class="post-links">
                                     <a href="<?php the_permalink(); ?>" class="btn btn-default post-permalink">Read More</a>
