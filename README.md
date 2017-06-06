@@ -7,4 +7,4 @@ Default setup and configuration for working with Bootstrap in WordPress
 * Run `npm install` to install its dependencies.
 * Run `gulp` to start the watch task.
 
-As you make edits to the `.scss` files stored in the `/sass` directory, Gulp will automatically compile, autoprefix and minify your CSS.
+As you make edits to the `.scss` files stored in the `/src` directory, Gulp will automatically compile, autoprefix and minify your CSS.
