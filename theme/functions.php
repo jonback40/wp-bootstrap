@@ -26,7 +26,7 @@ add_action('wp_enqueue_scripts', 'css_styles_enqueue');
 // Load in scripts
 function js_scripts_enqueue() {
     wp_enqueue_script('jquery');
-	
+    
     wp_register_script('bootstrap-js', get_template_directory_uri(). '/js/bootstrap.js', array('jquery'), '3.3.7', true);
     wp_enqueue_script('bootstrap-js');
     
@@ -41,5 +41,16 @@ function remove_admin_login_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
 add_action('get_header', 'remove_admin_login_header');
+
+
+// Move the comment body field to the bottom of the comments form
+function move_comment_field_to_bottom($fields) {
+    $comment_field = $fields['comment'];
+    unset($fields['comment']);
+    $fields['comment'] = $comment_field;
+    
+    return $fields;
+}
+add_filter('comment_form_fields', 'move_comment_field_to_bottom');
 
 ?>
