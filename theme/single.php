@@ -14,7 +14,7 @@
                 <?php while (have_posts()): the_post(); ?>
                     <div class="post">
                         <div class="post-inner">
-                            <div class="post-thumbnail"><?php the_post_thumbnail('medium'); ?></div>
+                            <div class="post-thumbnail"><?php the_post_thumbnail('full'); ?></div>
                             <h3 class="post-title"><?php the_title(); ?></h3>
                             <div class="post-author">By <?php the_author(); ?></div>
                             <div class="post-date">On <?php the_time('F jS, Y'); ?></div>

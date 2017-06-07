@@ -14,7 +14,6 @@
                 <div class="posts">
                     <?php while (have_posts()): the_post(); ?>
                         <div class="post">
-                            <a href="<?php the_permalink(); ?>" class="post-thumbnail" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></a>
                             <div class="post-inner">
                                 <div class="post-thumbnail"><?php the_post_thumbnail('medium'); ?></div>
                                 <h3 class="post-title"><?php the_title(); ?></h3>
