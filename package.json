@@ -4,7 +4,7 @@
   "description": "Default setup and configuration for working with Bootstrap and SASS in WordPress",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp watch"
   },
   "repository": {
     "type": "git",
