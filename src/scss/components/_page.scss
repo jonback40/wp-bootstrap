@@ -1,0 +1,20 @@
+//
+// Page Containers
+// ----------------------------------------------------------------------------------------------------
+
+
+.page,
+.page-header,
+.page-nav,
+.page-main,
+.page-title,
+.page-footer {
+    position: relative;
+}
+
+.page,
+.page-main,
+.page-title,
+.page-footer { z-index: 1; }
+.page-header { z-index: 2; }
+.page-nav    { z-index: 3; }

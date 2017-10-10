@@ -6,7 +6,7 @@ var $ = require('gulp-load-plugins')({ lazy: true });
 
 // Tasks
 gulp.task('styles', function() {
-    gulp.src('./src/style.scss')
+    gulp.src('./src/scss/style.scss')
         .pipe($.plumber({
             handleError: function(err) {
                 console.log(err);
@@ -21,7 +21,6 @@ gulp.task('styles', function() {
                 browsers: [ 'last 2 versions', '> 5%' ]
             }),
             cssnano({
-                discardComments: { removeAll: true },
                 zindex: false
             })
         ]))
@@ -29,7 +28,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('./src/**/*.scss', ['styles']);
+    gulp.watch('./src/scss/**/*.scss', ['styles']);
 });
 
 gulp.task('default', ['styles', 'watch']);

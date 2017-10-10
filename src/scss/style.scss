@@ -1,0 +1,25 @@
+/*!
+Theme Name: SITE NAME
+Theme URI: SITE URL
+Author: AUTHOR NAME
+Author URI: AUTHOR URL
+Description: SITE DESCRIPTION
+Version: 1.0.0
+!*/
+
+@import "config/config";
+@import "config/mixins";
+
+@import "bootstrap";
+
+@import "components/rebase";
+@import "components/header";
+@import "components/logo";
+@import "components/nav";
+@import "components/body";
+@import "components/footer";
+@import "components/buttons";
+@import "components/icons";
+@import "components/page";
+@import "components/posts";
+@import "components/comments";

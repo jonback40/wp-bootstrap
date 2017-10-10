@@ -1,0 +1,21 @@
+//
+// Icons
+// ----------------------------------------------------------------------------------------------------
+
+
+.icon {
+    @include text-hide();
+    
+    width: 30px;
+    height: 30px;
+    background-image: url("images/icons.svg");
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+}
+
+.icon-facebook { background-position: 0 0; }
+.icon-twitter  { background-position: -30px 0; }
+.icon-google   { background-position: -60px 0; }

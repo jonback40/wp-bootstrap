@@ -1,0 +1,19 @@
+//
+// Body
+// ----------------------------------------------------------------------------------------------------
+
+
+// Main Content
+.page-main {
+    > .inner {
+        padding-top: $section-spacer;
+        padding-bottom: $section-spacer;
+    }
+}
+
+
+// Page Title
+.page-title {
+    padding-top: $section-spacer;
+    padding-bottom: $section-spacer;
+}

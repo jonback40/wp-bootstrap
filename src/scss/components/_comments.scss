@@ -1,0 +1,52 @@
+//
+// Comments
+// ----------------------------------------------------------------------------------------------------
+
+
+.comment-reply-title {
+    
+}
+
+.comment-form {
+    p[class*="comment-form-"] {
+        @extend .form-group;
+    }
+    
+    input[type="text"],
+    textarea,
+    select {
+        @extend .form-control;
+    }
+    
+    input[type="submit"] {
+        @extend .btn;
+        @extend .btn-primary;
+    }
+}
+.comment {
+    list-style: none;
+    
+    + .comment {
+        margin-top: ($section-spacer / 2);
+    }
+    
+    .avatar {
+        border-radius: $border-radius-base;
+    }
+}
+
+.comment-body {
+    
+}
+
+.comment-author {
+    
+}
+
+.comment-meta {
+    
+}
+
+.comment-reply-link {
+    
+}
