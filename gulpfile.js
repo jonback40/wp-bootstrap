@@ -21,6 +21,7 @@ gulp.task('styles', function() {
                 browsers: [ 'last 2 versions', '> 5%' ]
             }),
             cssnano({
+                discardComments: { removeAll: true },
                 zindex: false
             })
         ]))
