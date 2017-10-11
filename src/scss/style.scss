@@ -9,9 +9,10 @@ Version: 1.0.0
 
 
 // Configuration
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------
 
 @import "config/config";
+@import "config/bootstrap";
 @import "config/mixins";
 
 
@@ -20,9 +21,8 @@ Version: 1.0.0
 // Bootstrap
 //
 // The path to Bootstrap assets is enabled via gulpfile.js.
-//
 // Alternatively, you could include the entire framework with @import "bootstrap"
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------
 
 // Core variables and mixins
 @import "bootstrap/variables";
@@ -79,7 +79,7 @@ Version: 1.0.0
 
 
 // Theme Components
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------
 
 @import "components/rebase";
 @import "components/header";
