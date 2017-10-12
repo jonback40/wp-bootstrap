@@ -15,14 +15,22 @@
                     <?php while (have_posts()): the_post(); ?>
                         <div class="post">
                             <div class="post-inner">
-                                <div class="post-thumbnail"><?php the_post_thumbnail('medium'); ?></div>
-                                <h3 class="post-title"><?php the_title(); ?></h3>
+                                <div class="post-thumbnail">
+	                                <a href="<?php the_permalink(); ?>" title="Read More">
+		                                <?php the_post_thumbnail('medium'); ?>
+	                                </a>
+		                        </div>
+                                <h3 class="post-title">
+	                                <a href="<?php the_permalink(); ?>" title="Read More">
+		                                <?php the_title(); ?>
+	                                </a>
+			                    </h3>
                                 <div class="post-author">By <?php the_author(); ?></div>
                                 <div class="post-date">On <?php the_time('F jS, Y'); ?></div>
                                 <div class="post-excerpt"><?php the_excerpt(); ?></div>
                                 <div class="post-links">
-                                    <a href="<?php the_permalink(); ?>" class="btn btn-default post-permalink">Read More</a>
-                                    <a href="<?php comments_link(); ?>" class="post-comments-link">
+                                    <a href="<?php the_permalink(); ?>" class="btn btn-default post-permalink" title="Read More">Read More</a>
+                                    <a href="<?php comments_link(); ?>" class="post-comments-link" title="View Comments">
                                         <?php comments_number(); ?>
                                     </a>
                                 </div>
