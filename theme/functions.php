@@ -53,4 +53,49 @@ function move_comment_field_to_bottom($fields) {
 }
 add_filter('comment_form_fields', 'move_comment_field_to_bottom');
 
+
+ // Register widget area - this is an an example of widget usage (Can delete if not needed)
+function site_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Widget Area', 'site' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'site' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'site_widgets_init' );
+
+
+// Pagination for blog posts
+function pagination_bar() {
+    global $wp_query;
+
+    $total_pages = $wp_query->max_num_pages;
+
+    if ($total_pages > 1){
+        $current_page = max(1, get_query_var('paged'));
+
+        echo paginate_links(array(
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => '/page/%#%',
+            'current' => $current_page,
+            'total' => $total_pages,
+            'prev_text'=> '&laquo;',
+            'next_text'=> '&raquo;'
+        ));
+    }
+}
+
+// NOTE::
+// If not using woocommerce plugin, delete woocommerce code below
+// Declare WooCommerce support
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+
 ?>
