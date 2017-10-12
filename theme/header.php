@@ -10,7 +10,7 @@
     <link href="<?php echo get_bloginfo('template_directory'); ?>/icons/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon-precomposed">
     <link href="<?php echo get_bloginfo('template_directory'); ?>/icons/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon-precomposed">
     <link href="<?php echo get_bloginfo('template_directory'); ?>/icons/apple-touch-icon-144x144.png" sizes="144x144" rel="apple-touch-icon-precomposed">
-    <link href="<?php echo get_bloginfo('template_directory'); ?>/favicon.ico" rel="shortcut icon">
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/icons/favicon.ico" rel="shortcut icon">
     
     <?php wp_head(); ?>
     
@@ -26,6 +26,20 @@
                         <img src="<?php echo get_bloginfo('template_url'); ?>/images/logo.svg" alt="<?php echo get_bloginfo('name'); ?>">
                     </a>
                 </h2>
+                
+                <a href="#" class="navicon">
+                    <span class="navicon-bar"></span>
+                    <span class="navicon-bar"></span>
+                    <span class="navicon-bar"></span>
+                </a>
+                
+                <nav class="page-nav">
+                    <div class="container">
+                        <div class="menu-wrapper">
+                            <?php wp_nav_menu(array('menu'=> 'main-menu')); ?>
+                        </div>
+                    </div>
+                </nav>
                 
             </div>
         </header>
