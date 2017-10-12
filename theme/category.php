@@ -1,33 +1,44 @@
 <?php get_header(); ?>
-	<div class="page-banner">
-		
-    </div>
-        
-    <div class="page-main">        
-        <div class="inner">
-            <div class="default-section">
-	            <h1 class="pageTitle">News</h1>
-	            
-                <div class="blog-post-display">
-					<?php // Display blog posts on any page
-						while ( have_posts() ) : the_post();
-					?>
-                        
-                    <div class="blog-post">
-                        <h2 class="blog-post-title">
-                        <a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
-                        <small>Posted on <?php the_time('n.j.Y') ?> </small>
-                        <div class="blog-post-thumb"><?php the_post_thumbnail(); ?></div>
-                        <div class="blog-post-summary"><?php the_excerpt(); ?></div>
-                    </div>
-                    <?php endwhile; ?>
-				</div>
-	
-                <nav class="blog-pagination">
-                    <?php pagination_bar(); ?>
-                </nav>
-            </div>
+<div class="page-main">
+    <div class="page-title">
+        <div class="container">
+            
+            <h1>Categories</h1>
+            
         </div>
     </div>
-
+    <div class="inner">
+        <div class="container">
+            
+            <?php if (have_posts()): ?>
+                <div class="posts">
+                    <?php while (have_posts()): the_post(); ?>
+                        <div class="post">
+                            <div class="post-inner">
+                                <div class="post-thumbnail"><?php the_post_thumbnail('medium'); ?></div>
+                                <h3 class="post-title"><?php the_title(); ?></h3>
+                                <div class="post-author">By <?php the_author(); ?></div>
+                                <div class="post-date">On <?php the_time('F jS, Y'); ?></div>
+                                <div class="post-excerpt"><?php the_excerpt(); ?></div>
+                                <div class="post-links">
+                                    <a href="<?php the_permalink(); ?>" class="btn btn-default post-permalink">Read More</a>
+                                    <a href="<?php comments_link(); ?>" class="post-comments-link">
+                                        <?php comments_number(); ?>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+                
+                <nav class="pager">
+                    <?php pagination_bar(); ?>
+                </nav>
+            <?php else: ?>
+                <p><em>Sorry, no posts were found.</em></p>
+            <?php endif; ?>
+            
+        </div>
+    </div>
+</div>
 <?php get_footer(); ?>

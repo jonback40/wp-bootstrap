@@ -34,12 +34,12 @@
                 </a>
                 
                 <nav class="page-nav">
-	                <div class="container">
-	                    <div class="menu-wrapper">
-	                        <?php wp_nav_menu(array('menu'=> 'main-menu')); ?>
-	                    </div>
-	                </div>
-	            </nav>
+                    <div class="container">
+                        <div class="menu-wrapper">
+                            <?php wp_nav_menu(array('menu'=> 'main-menu')); ?>
+                        </div>
+                    </div>
+                </nav>
                 
             </div>
         </header>
